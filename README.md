@@ -1,59 +1,54 @@
-# PatronesDisenoAngular
+# Patrones de diseño
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.7.
+Demostración interactiva de dos patrones de diseño implementados en TypeScript y presentados con Angular.
 
-## Development server
+🔗 **Demo:** https://angela-aponte.github.io/patrones-diseno-angular/
 
-To start a local development server, run:
+## Patrones
+
+| Patrón | Tipo | Descripción |
+|--------|------|-------------|
+| Observer | Comportamiento | Un sujeto notifica a todos los observadores suscritos cuando emite un mensaje. Se pueden suscribir y desuscribir en tiempo real. |
+| Builder | Creacional | Construye paso a paso un objeto complejo (una pizza) mediante llamadas encadenadas. |
+
+## Estructura
+
+```
+src/app/
+├── patrones/
+│   ├── observer.ts   # Sujeto y Observador
+│   └── builder.ts    # PizzaBuilder
+├── app.ts            # Demo de ambos patrones
+└── app.html
+```
+
+## Tecnologías
+
+- Angular (componentes standalone y Signals)
+- TypeScript, HTML y CSS
+- GitHub Actions y GitHub Pages
+
+## Ejecución local
 
 ```bash
+git clone https://github.com/angela-aponte/patrones-diseno-angular.git
+cd patrones-diseno-angular
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Pruebas
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+Incluye pruebas unitarias de `Sujeto` (Observer) y `PizzaBuilder` (Builder).
 
-For end-to-end (e2e) testing, run:
+## Despliegue
 
-```bash
-ng e2e
-```
+Cada `push` a `main` ejecuta el pipeline de GitHub Actions: compila la aplicación, la publica en GitHub Pages y verifica que el sitio responda correctamente.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Autora
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Angela Aponte · Ingeniería de Sistemas, UCEVA · Arquitectura de Software
